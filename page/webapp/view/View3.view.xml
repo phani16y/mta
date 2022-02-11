@@ -1,0 +1,90 @@
+<mvc:View
+    controllerName="page.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    height="100%"
+>
+    <Shell id="shell">
+        <App id="app">
+	<tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<Image height="1.5rem"
+					   class="sapUiSmallMarginBegin"
+					   src="https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg" />
+				<Title level="H1" text="Product Name">
+					<layoutData>
+						<OverflowToolbarLayoutData shrinkable="true" />
+					</layoutData>
+				</Title>
+				<Title level="H3" titleStyle="H6" text="Second Title">
+					<layoutData>
+						<OverflowToolbarLayoutData shrinkable="true" />
+					</layoutData>
+				</Title>
+				<ToolbarSpacer>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px" />
+					</layoutData>
+				</ToolbarSpacer>
+				<tnt:ToolHeaderUtilitySeparator />
+				<OverflowToolbarButton text="Search" tooltip="Search" icon="sap-icon://search" type="Transparent" />
+				<OverflowToolbarButton text="Tasks" tooltip="Tasks" icon="sap-icon://circle-task" type="Transparent" />
+				<OverflowToolbarButton text="Notifications" tooltip="Notifications" icon="sap-icon://bell" type="Transparent" />
+				<OverflowToolbarButton text="Custom Action" tooltip="Custom Action" icon="sap-icon://grid" type="Transparent" />
+			</tnt:ToolHeader>
+		</tnt:header>    
+		<tnt:mainContents>
+			<NavContainer id="pageContainer" initialPage="page1">
+				<pages>
+					<ScrollContainer
+						id="page1"
+						horizontal="false"
+						vertical="true"
+						height="100%">
+						<Text text="Home" />
+					</ScrollContainer>
+					<ScrollContainer
+						id="page2"
+						horizontal="false"
+						vertical="true"
+						height="100%">
+						<Text text="Applications" />
+					</ScrollContainer>
+					<ScrollContainer
+						id="page3"
+						horizontal="false"
+						vertical="true"
+						height="100%">
+						<Text text="Users and Groups" />
+					</ScrollContainer>
+					<ScrollContainer
+						id="page4"
+						horizontal="false"
+						vertical="true"
+						height="100%">
+						<Text text="Identity" />
+					</ScrollContainer>
+					<ScrollContainer
+							id="page5"
+							horizontal="false"
+							vertical="true"
+							height="100%">
+						<Text text="Provisioning" />
+					</ScrollContainer>
+					<ScrollContainer
+							id="page6"
+							horizontal="false"
+							vertical="true"
+							height="100%">
+						<Text text="Monitoring" />
+					</ScrollContainer>
+				</pages>
+			</NavContainer>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+    </App>
+    </Shell>
+</mvc:View>

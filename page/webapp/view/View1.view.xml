@@ -1,0 +1,61 @@
+<mvc:View
+    controllerName="page.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns="sap.m"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+	xmlns:tnt="sap.tnt"
+	xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true">
+	<Shell id="shell">
+		<App id="App" backgroundImage="Images/el_cortees_ingles_headquarters.jpg">
+			<pages>
+				<Page id="pageid1" backgroundDesign="Transparent">
+					<customHeader>
+						<f:ShellBar id = "SB"  class="shell-bar" title="{i18n>title}" homeIcon="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/El_Corte_Ingl%C3%A9s_logo.svg/375px-El_Corte_Ingl%C3%A9s_logo.svg.png" showCopilot="true" showMenuButton="false" showSearch="false" showNotifications="false" showProductSwitcher="true" productSwitcherPressed="fnOpen">
+							<f:profile>
+								<f:Avatar id="avatarId" initials="MN"/>
+							</f:profile>
+						</f:ShellBar>
+					</customHeader>
+					<ScrollContainer id = "SC" height="100%" width="100%" vertical="true">
+						<f:GridContainer id="demoGrid" class="sapUiTinyMargin">
+							<f:layout>
+								<f:GridContainerSettings id ="G1" rowSize="84px" columnSize="84px" gap="4px"/>
+							</f:layout>
+							<f:layoutXS>
+								<f:GridContainerSettings id = "G2" rowSize="70px" columnSize="70px" gap="8px"/>
+							</f:layoutXS>
+							<f:Card id = "C" class="sapUiTinyMargin">
+								<f:layoutData>
+									<f:GridContainerItemLayoutData id = "GC" columns="14"/>
+								</f:layoutData>
+								<f:content>
+									<VBox id = "V1" class="sapUiSmallMargin" justifyContent="SpaceBetween">
+										<core:HTML id="idHtmlUserDetails" content='&lt;div class="content"&gt;Welcome &lt;strong&gt;{UserDetailsModel>/jwtDetails/id} !!&lt;/strong&gt;&lt;font size="2"&gt;&lt;/div&gt;'></core:HTML>
+									</VBox>
+								</f:content>
+							</f:Card>
+							<f:Card id = "C2" class="sapUiTinyMargin">
+								<f:layoutData>
+									<f:GridContainerItemLayoutData id = "GC1" columns="14"/>
+								</f:layoutData>
+								<f:content>
+									<VBox id="mainCardContentVBox" visible="true" class="sapUiMediumMargin" justifyContent="SpaceBetween">
+										<core:HTML id="webHtmlContent" content='&lt;div class=&quot;content&quot;&gt;&lt;h4&gt;Supplier Portal&lt;/h4&gt;&lt;font size=&quot;2&quot;&gt;Customer’s Strategic Sourcing Group is committed to long-term, mutually beneficial relationships with our Global suppliers.&lt;br&gt;&lt;br&gt;Customer works with suppliers who deliver the best quality, service and highest value to cost ratio. Our suppliers are innovative and dedicated to driving continuous improvement in their operations.&lt;br&gt;&lt;br&gt;Customer Strategic Sourcing are responsible for the acquisition of goods and services for the Customer organization which encompasses, but is not limited to; advertising, marketing, office supplies, material handling equipment, energy and temporary staffing.&lt;/div&gt;'></core:HTML>
+									</VBox>
+								</f:content>
+							</f:Card>
+						</f:GridContainer>
+					</ScrollContainer>
+					<footer>
+						<OverflowToolbar id="otbFooter">
+						</OverflowToolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

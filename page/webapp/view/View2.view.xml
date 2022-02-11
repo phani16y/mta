@@ -1,0 +1,58 @@
+<mvc:View
+    controllerName="page.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    height="100%"
+>
+    <Shell id="shell">
+        <App id="app">
+        <tnt:ToolPage id="toolPage">
+	    <tnt:ToolHeader id = "TH" width="1300px">
+        <Image id = "im" height="1.5rem"
+		 class="sapUiSmallMarginBegin"
+		 src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/El_Corte_Ingl%C3%A9s_logo.svg/375px-El_Corte_Ingl%C3%A9s_logo.svg.png" />
+		<IconTabHeader
+			id="iconTabHeader"
+			selectedKey="invalidKey"
+			select=".onSelectTab"
+			backgroundDesign="Transparent"
+			mode="Inline">
+			<layoutData>
+				<OverflowToolbarLayoutData id = "OL1" priority="NeverOverflow" shrinkable="true" />
+			</layoutData>
+			<items>
+                <IconTabFilter id = "IT2" text="Home" icon="sap-icon://home"/>
+				<IconTabFilter id = "IT" text="Applications" />
+				<IconTabFilter id = "IT1" text="Contact" />
+			</items>
+		</IconTabHeader>
+		<Button id = "B2" icon="sap-icon://search" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData id = "OL2"  priority="NeverOverflow" />
+			</layoutData>
+		</Button>
+	</tnt:ToolHeader>
+    <tnt:mainContents>
+  		<NavContainer
+			id="navCon"
+			width="98%"
+			height="16em"
+			class="navContainerControl sapUiSmallMarginBottom">
+			<Page
+				id="p1"
+				title="Page 1" >
+				<Text id = "TT1">"Terms"</Text>
+			</Page>
+			<Page
+				id="p2"
+				title="Page 2" >
+				<Text id = "TT2">"Tiles"</Text>
+			</Page>
+		</NavContainer>
+        </tnt:mainContents>
+        </tnt:ToolPage>
+    </App>
+    </Shell>
+</mvc:View>

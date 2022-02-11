@@ -1,0 +1,92 @@
+_schema-version: "3.2"
+ID: mta
+version: 0.0.1
+modules:
+- name: mta-destination-content
+  type: com.sap.application.content
+  requires:
+  - name: mta-destination-service
+    parameters:
+      content-target: true
+  - name: mta_html_repo_host
+    parameters:
+      service-key:
+        name: mta_html_repo_host-key
+  - name: uaa_mta
+    parameters:
+      service-key:
+        name: uaa_mta-key
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Name: Page_mta_html_repo_host
+          ServiceInstanceName: mta-html5-app-host-service
+          ServiceKeyName: mta_html_repo_host-key
+          sap.cloud.service: Page
+        - Authentication: OAuth2UserTokenExchange
+          Name: Page_uaa_mta
+          ServiceInstanceName: mta-xsuaa-service
+          ServiceKeyName: uaa_mta-key
+          sap.cloud.service: Page
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+- name: mta-app-content
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: mta_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - page.zip
+      name: page
+      target-path: resources/
+- name: page
+  type: html5
+  path: page
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+resources:
+- name: mta-destination-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      init_data:
+        instance:
+          destinations:
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          existing_destinations_policy: update
+      version: 1.0.0
+    service: destination
+    service-name: mta-destination-service
+    service-plan: lite
+- name: mta_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-name: mta-html5-app-host-service
+    service-plan: app-host
+- name: uaa_mta
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: mta-xsuaa-service
+    service-plan: application
+parameters:
+  deploy_mode: html5-repo

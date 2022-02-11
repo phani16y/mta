@@ -1,0 +1,93 @@
+<mvc:View
+    controllerName="page.controller.View4"
+		height="100%"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:core="sap.ui.core"
+        xmlns:l="sap.ui.layout"
+		xmlns:forms="sap.ui.layout.form"
+		xmlns:uxap="sap.uxap"
+        xmlns:f="sap.f"
+	    xmlns:card="sap.f.cards"
+		xmlns="sap.m"
+>
+    <Shell id="shell">
+        <App id="app">
+        <pages>
+        <Page id="page" title="{i18n>title}">
+        <content>
+        <uxap:ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
+		<uxap:headerTitle>
+		<uxap:ObjectPageHeader
+                    objectImageDensityAware="true"
+                    objectImageURI = "https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/El_Corte_Ingl%C3%A9s_logo.svg/375px-El_Corte_Ingl%C3%A9s_logo.svg.png"
+					objectTitle="Supplier Portal"
+                    isObjectIconAlwaysVisible="true"/>
+		</uxap:headerTitle>
+		<uxap:sections>
+			<uxap:ObjectPageSection titleUppercase="false" title="Sample Forms">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="Home" titleUppercase="false">
+						<uxap:blocks>
+					<ScrollContainer id = "SC" height="100%" width="100%" vertical="true">
+						<f:GridContainer id="demoGrid" class="sapUiTinyMargin">
+							<f:layout>
+								<f:GridContainerSettings id ="G1" rowSize="1px" columnSize="84px" gap="1px"/>
+							</f:layout>
+							<f:layoutXS>
+								<f:GridContainerSettings id = "G2" rowSize="70px" columnSize="70px" gap="1px"/>
+							</f:layoutXS>
+							<f:Card id = "C" class="sapUiTinyMargin">
+								<f:layoutData>
+									<f:GridContainerItemLayoutData id = "GC" minRows="1" columns="14"/>
+								</f:layoutData>
+								<f:content>
+									<VBox id = "V1" class="sapUiSmallMargin" justifyContent="SpaceBetween">
+					               <core:HTML id="idHtmlUserDetails" content='&lt;div class="content"&gt;Welcome &lt;strong&gt;!!&lt;/strong&gt;&lt;font size="2"&gt;&lt;/div&gt;'></core:HTML> 
+									</VBox>
+								</f:content>
+							</f:Card>
+							<f:Card id = "C2" class="sapUiTinyMargin">
+								<f:layoutData>
+									<f:GridContainerItemLayoutData id = "GC1" columns="14"/>
+								</f:layoutData>
+								<f:content>
+									<VBox id="mainCardContentVBox" visible="true" class="sapUiMediumMargin" justifyContent="SpaceBetween">
+										<core:HTML id="webHtmlContent" content='&lt;div class=&quot;content&quot;&gt;&lt;h4&gt;Terms and conditions &lt;/h4&gt;&lt;font size=&quot;2&quot;&gt;Customer’s Strategic Sourcing Group is committed to long-term, mutually beneficial relationships with our Global suppliers.&lt;br&gt;Customer works with suppliers who deliver the best quality, service and highest value to cost ratio. Our suppliers are innovative and dedicated to driving continuous improvement in their operations.&lt;br&gt;Customer Strategic Sourcing are responsible for the acquisition of goods and services for the Customer organization which encompasses, but is not limited to; advertising, marketing, office supplies, material handling equipment, energy and temporary staffing.&lt;/div&gt;'></core:HTML>
+									</VBox>
+								</f:content>
+							</f:Card>
+						</f:GridContainer>
+					</ScrollContainer>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+			<uxap:ObjectPageSection titleUppercase="false" showTitle="false">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="Applications" titleUppercase="false">
+	<l:HorizontalLayout class="sapUiContentPadding" >
+	    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+                  header="SAP Ariba"	subheader="Supplier" press="press">
+		<TileContent>
+			<ImageContent src="./images/SAP-Ariba-logo-vierkant.png" />
+		</TileContent>
+	     </GenericTile> 
+
+    	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+              header="SAP Fieldglass"	subheader="Supplier" press="press1">
+		<TileContent>
+			<ImageContent src="./images/sap-fieldglass-vector-logo-small.png" />
+		</TileContent>
+	     </GenericTile>
+	  </l:HorizontalLayout>
+		</uxap:ObjectPageSubSection >
+		</uxap:subSections>
+		</uxap:ObjectPageSection>
+		</uxap:sections>
+	</uxap:ObjectPageLayout>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
