@@ -7,7 +7,7 @@
         "applicationVersion": {
             "version": "0.0.1"
         },
-        "title": "{{appTitle}}",
+        "title": "{{Single Sign on}}",
         "description": "{{appDescription}}",
         "dataSources": {
             "mainService": {

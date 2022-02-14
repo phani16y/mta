@@ -52,7 +52,14 @@
 								</f:layoutData>
 								<f:content>
 									<VBox id="mainCardContentVBox" visible="true" class="sapUiMediumMargin" justifyContent="SpaceBetween">
-										<core:HTML id="webHtmlContent" content='&lt;div class=&quot;content&quot;&gt;&lt;h4&gt;Terms and conditions &lt;/h4&gt;&lt;font size=&quot;2&quot;&gt;Customer’s Strategic Sourcing Group is committed to long-term, mutually beneficial relationships with our Global suppliers.&lt;br&gt;Customer works with suppliers who deliver the best quality, service and highest value to cost ratio. Our suppliers are innovative and dedicated to driving continuous improvement in their operations.&lt;br&gt;Customer Strategic Sourcing are responsible for the acquisition of goods and services for the Customer organization which encompasses, but is not limited to; advertising, marketing, office supplies, material handling equipment, energy and temporary staffing.&lt;/div&gt;'></core:HTML>
+										<core:HTML id="webHtmlContent" content='&lt;div class=&quot;content&quot;&gt;&lt;h4&gt;Terms and conditions &lt;/h4&gt;&lt;font size=&quot;2&quot;&gt;Customer’s Strategic Sourcing Group is committed to long-term, mutually beneficial relationships with our
+                                         Global suppliers.&lt;br&gt;Customer works with suppliers who
+                                          deliver the best quality, service and highest value to cost ratio.
+                                           Our suppliers are innovative and dedicated to driving continuous improvement in their 
+                                           operations.&lt;br&gt;Customer Strategic Sourcing are responsible for the acquisition of
+                                            goods and services for the Customer organization which encompasses, but is not limited to;
+                                             advertising, marketing, office supplies, material handling equipment, energy and temporary
+                                              staffing.&lt;/div&gt;'></core:HTML>
 									</VBox>
 								</f:content>
 							</f:Card>
@@ -69,7 +76,7 @@
 	    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
                   header="SAP Ariba"	subheader="Supplier" press="press">
 		<TileContent>
-			<ImageContent src="./images/SAP-Ariba-logo-vierkant.png" />
+			<ImageContent src="./images/SAP-Ariba-logo-vierkant.png " />
 		</TileContent>
 	     </GenericTile> 
 
